@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">HomeFinance</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="despesas">Despesas</string>
+    <string name="entradas">Entradas</string>
+
+    <string name="title">Vai foto</string>
+    <string name="body">Vai descrição</string>
+    <string name="value">Vai valor</string>
+    <string name="money_symbol">$$$$$</string>
+    <string name="add_item">Adicione</string>
+    <string name="picute">picture</string>
+    <string name="earnings">Total Entradas</string>
+    <string name="result_money_in">R$ $$$$$$$</string>
+    <string name="total_money_out">R$ $$$$$$</string>
+    <string name="saved_last_month">Salvo Mês Anterior</string>
+    <string name="value_salved_last_month">R$ $$$$$$$</string>
+    <string name="value_total_money_out">R$ $$$$$</string>
+    <string name="total_out">Total das Despesas</string>
+    <string name="image_hint">Adicione Um Item</string>
+    <string name="text_new_money">descrição</string>
+    <string name="debt">Despesas</string>
+    <string name="income">Entradas</string>
+</resources>

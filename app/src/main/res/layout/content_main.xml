@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:gravity="bottom"
+        android:text="@string/earnings"
+        app:layout_constraintStart_toStartOf="@+id/new_money_description"
+        app:layout_constraintTop_toBottomOf="@+id/new_money_description" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:gravity="bottom"
+        android:text="@string/total_out"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:gravity="bottom"
+        android:text="@string/saved_last_month"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:gravity="bottom"
+        android:text="@string/result_money_in"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:gravity="bottom"
+        android:text="@string/value_salved_last_month"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:gravity="bottom"
+        android:text="@string/value_total_money_out"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/btn_add_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:contentDescription="@string/image_hint"
+        app:layout_constraintBottom_toBottomOf="@+id/new_money_value"
+        app:layout_constraintStart_toEndOf="@+id/new_money_value"
+        app:layout_constraintTop_toTopOf="@+id/new_money_value"
+        app:srcCompat="@drawable/ic_plus_sign" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/money_recicleView"
+        android:layout_width="352dp"
+        android:layout_height="272dp"
+        android:layout_marginTop="151dp"
+        android:layout_marginBottom="252dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/new_money_description"
+        android:layout_width="148dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/text_new_money"
+        android:imeOptions="flagNoFullscreen"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/money_recicleView"
+        app:layout_constraintTop_toBottomOf="@+id/money_recicleView" />
+
+    <EditText
+        android:id="@+id/new_money_value"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:allowUndo="false"
+        android:breakStrategy="simple"
+        android:contextClickable="true"
+        android:ems="10"
+        android:hint="@string/value_total_money_out"
+        android:imeOptions="flagNoFullscreen"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintBaseline_toBaselineOf="@+id/new_money_description"
+        app:layout_constraintStart_toEndOf="@+id/new_money_description" />
+
+    <Button
+        android:id="@+id/btn_debts_home"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/colorControlActivated"
+        android:text="@string/debt"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/money_recicleView"
+        app:layout_constraintStart_toStartOf="@+id/money_recicleView" />
+
+    <Button
+        android:id="@+id/btn_incomes_home"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/income"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/money_recicleView"
+        app:layout_constraintEnd_toEndOf="@+id/money_recicleView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
