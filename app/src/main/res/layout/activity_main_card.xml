@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="#E6E6E2E4"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#E6E6E2E4"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
         android:elevation="15dp"
@@ -30,35 +31,38 @@
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    app:srcCompat="@android:drawable/ic_delete" />
+                    app:srcCompat="@android:drawable/ic_delete"
+                    android:contentDescription="@string/exclui_valores" />
 
                 <EditText
                     android:id="@+id/txtValor"
                     android:layout_width="138dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:ems="10"
                     android:gravity="center"
                     android:inputType="numberDecimal"
-                    android:textDirection="ltr" />
+                    android:textDirection="ltr"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor" />
 
                 <RadioButton
                     android:id="@+id/radioEntrada"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:text="Entrada" />
+                    android:layout_marginStart="5dp"
+                    android:text="@string/entrada" />
 
                 <RadioButton
                     android:id="@+id/radioSaida"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="15dp"
-                    android:text="Saída" />
+                    android:text="@string/saida" />
             </LinearLayout>
 
             <LinearLayout
@@ -69,54 +73,34 @@
 
                 <Button
                     android:id="@+id/somaum"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/roundedbutton"
-                    android:text="+1"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:text="@string/_1"
+                    style="@style/BotaoRedondoPequeno"/>
 
                 <Button
                     android:id="@+id/somacinco"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/roundedbutton"
-                    android:text="+5"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:text="@string/_5"
+                    style="@style/BotaoRedondoPequeno"/>
 
                 <Button
                     android:id="@+id/somadez"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/roundedbutton"
-                    android:text="+10"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:text="@string/_10"
+                    style="@style/BotaoRedondoPequeno"/>
 
                 <Button
                     android:id="@+id/somacinquenta"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/roundedbutton"
-                    android:text="+50"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:text="@string/_50"
+                    style="@style/BotaoRedondoPequeno"/>
 
                 <Button
                     android:id="@+id/somacem"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/roundedbutton"
-                    android:text="+100"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:text="@string/_100"
+                    style="@style/BotaoRedondoPequeno"/>
 
                 <Spinner
                     android:id="@+id/spinnerTipoTransacao"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:layout_weight="1"
                     android:layoutDirection="ltr"
                     android:textDirection="rtl" />
@@ -131,48 +115,28 @@
 
                 <Button
                     android:id="@+id/somaumCent"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/roundedbutton"
-                    android:text="+0,01"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:text="@string/_0_01"
+                    style="@style/BotaoRedondoPequeno"/>
 
                 <Button
                     android:id="@+id/somaCincoCent"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/roundedbutton"
-                    android:text="+0,5"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:text="@string/_0_5"
+                    style="@style/BotaoRedondoPequeno"/>
 
                 <Button
                     android:id="@+id/somaDezCent"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/roundedbutton"
-                    android:text="+0,10"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:text="@string/_0_10"
+                    style="@style/BotaoRedondoPequeno"/>
 
                 <Button
                     android:id="@+id/somaVinteCincoCent"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/roundedbutton"
-                    android:text="+0,25"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:text="@string/_0_25"
+                    style="@style/BotaoRedondoPequeno"/>
 
                 <Button
                     android:id="@+id/somaCinquentaCent"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/roundedbutton"
-                    android:text="+0,50"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:text="@string/_0_50"
+                    style="@style/BotaoRedondoPequeno"/>
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -180,7 +144,9 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_menu_gallery" />
+                    app:srcCompat="@drawable/ic_menu_gallery"
+                    android:contentDescription="@string/img_entrada_ou_saida"
+                    tools:ignore="InefficientWeight" />
 
             </LinearLayout>
 
@@ -190,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@android:color/holo_green_light"
-                android:text="Adicionar" />
+                android:text="@string/adicionar" />
 
 
         </LinearLayout>
