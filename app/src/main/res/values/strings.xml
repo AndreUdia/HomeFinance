@@ -33,4 +33,19 @@
     <string name="text_new_money">descrição</string>
     <string name="debt">Despesas</string>
     <string name="income">Entradas</string>
+    <string name="exclui_valores">Exclui Valores</string>
+    <string name="img_entrada_ou_saida">Imagem Entrada ou Saída</string>
+    <string name="entrada">Entrada</string>
+    <string name="saida">Saída</string>
+    <string name="_0_50">+0,50</string>
+    <string name="_0_25">+0,25</string>
+    <string name="_0_10">+0,10</string>
+    <string name="_0_5">+0,5</string>
+    <string name="_0_01">+0,01</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="_100">+100</string>
+    <string name="_50">+50</string>
+    <string name="_10">+10</string>
+    <string name="_5">+5</string>
+    <string name="_1">+1</string>
 </resources>
