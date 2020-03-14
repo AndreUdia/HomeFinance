@@ -30,7 +30,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/btnExcluiValor"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -38,7 +38,7 @@
                     android:contentDescription="@string/exclui_valores" />
 
                 <EditText
-                    android:id="@+id/txtValor"
+                    android:id="@+id/valorDaTransacao"
                     android:layout_width="138dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -51,14 +51,14 @@
                     tools:ignore="LabelFor" />
 
                 <RadioButton
-                    android:id="@+id/radioEntrada"
+                    android:id="@+id/transacaoDeEntrada"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="5dp"
                     android:text="@string/entrada" />
 
                 <RadioButton
-                    android:id="@+id/radioSaida"
+                    android:id="@+id/transacaoDeSaida"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="15dp"
@@ -72,27 +72,27 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/somaum"
+                    android:id="@+id/somaUm"
                     android:text="@string/_1"
                     style="@style/BotaoRedondoPequeno"/>
 
                 <Button
-                    android:id="@+id/somacinco"
+                    android:id="@+id/somaCinco"
                     android:text="@string/_5"
                     style="@style/BotaoRedondoPequeno"/>
 
                 <Button
-                    android:id="@+id/somadez"
+                    android:id="@+id/somaDez"
                     android:text="@string/_10"
                     style="@style/BotaoRedondoPequeno"/>
 
                 <Button
-                    android:id="@+id/somacinquenta"
+                    android:id="@+id/somaCinquenta"
                     android:text="@string/_50"
                     style="@style/BotaoRedondoPequeno"/>
 
                 <Button
-                    android:id="@+id/somacem"
+                    android:id="@+id/somaCem"
                     android:text="@string/_100"
                     style="@style/BotaoRedondoPequeno"/>
 
@@ -114,7 +114,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/somaumCent"
+                    android:id="@+id/somaUmCent"
                     android:text="@string/_0_01"
                     style="@style/BotaoRedondoPequeno"/>
 
@@ -156,7 +156,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@android:color/holo_green_light"
-                android:text="@string/adicionar" />
+                android:text="@string/adicionar"
+            />
 
 
         </LinearLayout>
