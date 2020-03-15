@@ -151,7 +151,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_menu_gallery"
+                    android:src="@drawable/ic_menu_gallery"
+                    android:tag="@string/img_padrao"
                     android:contentDescription="@string/img_entrada_ou_saida"
                     tools:ignore="InefficientWeight" />
 

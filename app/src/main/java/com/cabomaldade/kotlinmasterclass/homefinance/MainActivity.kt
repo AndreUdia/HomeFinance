@@ -2,7 +2,7 @@ package com.cabomaldade.kotlinmasterclass.homefinance
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.cabomaldade.kotlinmasterclass.homefinance.model.Transacao
 import kotlinx.android.synthetic.main.activity_main_card.*
@@ -18,6 +18,9 @@ class MainActivity: AppCompatActivity()  {
 
         valorDaTransacao.setText(0.0.toString()) // inicia o valor a apresentar na tela
 
+        Log.d(TAG, "imagem 1= ${R.drawable.ic_menu_camera} ")
+        Log.d(TAG, "imagem 2 = ${R.drawable.ic_menu_gallery} ")
+
         // Atribuindo OnclickListener para todos botões
         somaUm.setOnClickListener{ valorAtual(1.0) }
         somaCinco.setOnClickListener{ valorAtual(5.0) }
@@ -31,6 +34,9 @@ class MainActivity: AppCompatActivity()  {
         somaCinquentaCent.setOnClickListener{ valorAtual(0.50) }
 
         btnAdicionar.setOnClickListener{ insereTransacao(criaTransacao())}
+        btnExcluiValor.setOnClickListener{ valorDaTransacao.setText(0.0.toString()) }
+
+        iconeTransacao.setOnClickListener{ iconeTransacao.tag = "camera" }
     }
 
     // Atualiza valor da transação na tela  ! Tratado precisão 2 casas decimais
@@ -52,10 +58,17 @@ class MainActivity: AppCompatActivity()  {
     private fun criaTransacao(): Transacao{
         //Log.d(TAG, "cria Transacao foi chamada")
         val tipo = if (transacaoDeEntrada.isChecked) 1 else 2
+        var valorImagem: Int = 0
+        when(iconeTransacao.tag){
+            "padrao" -> valorImagem = R.drawable.ic_menu_gallery
+            "camera" -> valorImagem = R.drawable.somacinco
+        }
+
+        Log.d(TAG, "Dados da transação = $valorImagem ")
         return Transacao(
             valorDaTransacao.text.toString().toDouble(),
             "Implementar Spinner",
-            0,
+            valorImagem,
             tipo
         )
     }
